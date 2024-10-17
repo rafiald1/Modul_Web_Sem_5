@@ -1,0 +1,130 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url(BG_kal.jpg);
+  font-family: "Poppins", sans-serif;
+}
+
+.calculator {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  gap: 10px;
+  padding: 20px;
+  background-color: #fff;
+  opacity: 0.7;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  transition: all 0.3s ease-in-out;
+}
+
+.calculator:hover {
+  opacity: 1;
+  background-color: #f0f0f0;
+  transform: scale(1.05);
+}
+#display {
+  width: 100%;
+  font-size: 2em;
+  text-align: right;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+}
+
+.calculator-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+button {
+  padding: 20px;
+  font-size: 1.5em;
+  background-color: #1047c0;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.5s;
+}
+
+button.operator {
+  background-color: #ffffff;
+  color: black;
+  border: 1px solid #b9b6b6;
+}
+
+button.equal {
+  background-color: #e74c3c;
+  grid-column: span 4;
+}
+
+button:hover {
+  background-color: #3d6ae4;
+}
+
+button.operator:hover {
+  background-color: #f4f4f4;
+}
+
+button.equal:hover {
+  background-color: #c0392b;
+}
+
+@media (max-width: 1024px) {
+  .calculator {
+    width: 80%;
+  }
+
+  button {
+    padding: 15px;
+    font-size: 1.2em;
+  }
+}
+
+@media (max-width: 768px) {
+  .calculator {
+    width: 90%;
+  }
+
+  .calculator-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  button {
+    padding: 15px;
+    font-size: 1.1em;
+  }
+
+  button.equal {
+    grid-column: span 3;
+  }
+}
+
+@media (max-width: 480px) {
+  .calculator {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .calculator-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  button {
+    padding: 10px;
+    font-size: 1em;
+  }
+
+  button.equal {
+    grid-column: span 2;
+  }
+
+  #display {
+    font-size: 1.5em;
+  }
+}
