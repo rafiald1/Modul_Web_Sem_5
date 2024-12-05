@@ -17,7 +17,7 @@ class ProdukController extends Controller
         $posts = Produk::latest()->paginate(5);
 
         //return collection of posts as a resource
-        return new ProdukResource(true, 'List Data Posts', $posts);
+        return new ProdukResource(true, 'List Data Produk', $posts);
     }
 
     
@@ -50,7 +50,7 @@ class ProdukController extends Controller
         ]);
 
         //return response
-        return new ProdukResource(true, 'Data Post Berhasil Ditambahkan!', $post);
+        return new ProdukResource(true, 'Data Produk Berhasil Ditambahkan!', $post);
     }
 
     
@@ -60,7 +60,7 @@ class ProdukController extends Controller
         $post = Produk::find($id);
 
         //return single post as a resource
-        return new ProdukResource(true, 'Detail Data Post!', $post);
+        return new ProdukResource(true, 'Detail Data Produk!', $post);
     }
 
     
@@ -109,7 +109,7 @@ class ProdukController extends Controller
         }
 
         //return response
-        return new ProdukResource(true, 'Data Post Berhasil Diubah!', $post);
+        return new ProdukResource(true, 'Data Produk Berhasil Diubah!', $post);
     }
 
     
@@ -125,6 +125,6 @@ class ProdukController extends Controller
         $post->delete();
 
         //return response
-        return new ProdukResource(true, 'Data Post Berhasil Dihapus!', null);
+        return new ProdukResource(true, 'Data Produk Berhasil Dihapus!', null);
     }
 }
