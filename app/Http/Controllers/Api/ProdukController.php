@@ -93,18 +93,18 @@ class ProdukController extends Controller
 
             //update post with new image
             $post->update([
-                'image'      => $image->hashName(),
-                'name'       => $request->name,
-                'price'      => $request->price,
-                'description'=> $request->description,
+                'nama_produk' => $request->nama_produk,
+        'kategori' => $request->kategori,
+        'harga' => $request->harga,
+        'image' => $image->hashName(),
             ]);
         } else {
 
             //update post without image
             $post->update([
-                'name'       => $request->name,
-                'price'      => $request->price,
-                'description'=> $request->description,
+                'nama_produk'       => $request->nama_produk,
+                'kategori'      => $request->kategori,
+                'harga'=> $request->harga,
             ]);
         }
 
